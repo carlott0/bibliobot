@@ -14,7 +14,6 @@ today = date.today()
 nextWeek = today + datetime.timedelta( 7 )
 username = ""
 password = ""
-
 #prenotazioni di mattina e pomeriggio, se la prenotazione prevede un solo orario continuato modificare il payload seguente come fatto con bigiavi
 payloadMattina = {
 	"email":username,
