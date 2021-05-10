@@ -14,6 +14,8 @@ today = date.today()
 nextWeek = today + datetime.timedelta( 7 )
 username = ""
 password = ""
+
+#prenotazioni di mattina e pomeriggio, se la prenotazione prevede un solo orario continuato modificare il payload seguente come fatto con bigiavi
 payloadMattina = {
 	"email":username,
 	"date":str(nextWeek),
@@ -43,7 +45,7 @@ user_agent_list = [
 url = 'https://httpbin.org/headers'
 user_agent = random.choice(user_agent_list)
 headers = {'User-Agent': user_agent}
-link="https://reservation.affluences.com/api/reserve/50039"# per dore
+link="https://reservation.affluences.com/api/reserve/{numero id della biblio"# per ottenerlo bisogna guardare tramite console network il flusso di dati che esce da una prenotazione dalla biblio di interesse e trovare a chi viene fatta la chiamata API
 #link="https://reservation.affluences.com/api/reserve/50825" #per rimini
 r1 = requests.post(link, json=payloadMattina, headers=headers, timeout=5)
 r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
