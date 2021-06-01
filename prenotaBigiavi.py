@@ -42,7 +42,7 @@ headers = {'User-Agent': user_agent}
 link="https://reservation.affluences.com/api/reserve/50157" #per bigiavi
 r1 = requests.post(link, json=payloadZonaGialla, headers=headers, timeout=5)
 
-time.sleep(5)
+time.sleep(10)
 ######################
 ###MAIL###########
 ######################
