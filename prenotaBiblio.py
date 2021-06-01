@@ -47,8 +47,10 @@ headers = {'User-Agent': user_agent}
 link="https://reservation.affluences.com/api/reserve/{numero id della biblio"# per ottenerlo bisogna guardare tramite console network il flusso di dati che esce da una prenotazione dalla biblio di interesse e trovare a chi viene fatta la chiamata API
 #link="https://reservation.affluences.com/api/reserve/50825" #per rimini
 r1 = requests.post(link, json=payloadMattina, headers=headers, timeout=5)
-r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
+headers = {'User-Agent': user_agent}
 time.sleep(5)
+r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
+time.sleep(10)
 ######################
 ###MAIL###########
 ######################
