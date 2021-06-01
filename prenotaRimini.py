@@ -48,8 +48,10 @@ link="https://reservation.affluences.com/api/reserve/50825" #per rimini
 
 
 r1 = requests.post(link, json=payloadMattina, headers=headers, timeout=5)
-r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
+headers = {'User-Agent': user_agent}
 time.sleep(5)
+r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
+time.sleep(10)
 ######################
 ###MAIL###########
 ######################
