@@ -46,8 +46,10 @@ headers = {'User-Agent': user_agent}
 link="https://reservation.affluences.com/api/reserve/50039"# per dore
 
 r1 = requests.post(link, json=payloadMattina, headers=headers, timeout=5)
+rime.sleep(5)
+headers = {'User-Agent': user_agent}
 r1 = requests.post(link, json=payloadPomeriggio, headers=headers, timeout=5)
-time.sleep(5)
+time.sleep(10)
 ######################
 ###MAIL###########
 ######################
