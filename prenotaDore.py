@@ -16,8 +16,8 @@ from datetime import date
 import datetime
 today = date.today()
 nextWeek = today + datetime.timedelta( 7 )
-username = "carlomaria.conti2@studio.unibo.it"
-password = "Carlotto.98"
+username = ""
+password = ""
 payloadMattina = {
 	"email":username,
 	"date":str(nextWeek),
